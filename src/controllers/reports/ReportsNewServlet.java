@@ -34,10 +34,10 @@ public class ReportsNewServlet extends HttpServlet {
         request.setAttribute("_token",  request.getSession().getId());
 
         Report r = new Report();
-        r.setReport_date(new Date(System.currentTimeMillis()));
+        r.setReport_date(new Date(System.currentTimeMillis()));  //本日の日付を事前に取得
         request.setAttribute("report", r);
 
-        RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/reports/new.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/new.jsp");
         rd.forward(request, response);
     }
 

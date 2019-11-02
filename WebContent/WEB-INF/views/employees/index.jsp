@@ -5,6 +5,7 @@
         <c:if test="${flush != null}">
             <div id="flush_success">
                 <c:out value="${flush}"></c:out>
+
             </div>
         </c:if>
         <h2>従業員　一覧</h2>
@@ -47,6 +48,7 @@
                 </c:choose>
             </c:forEach>
         </div>
+        <c:set var="flush" value="null" />
         <p><a href="<c:url value='/employees/new' />">新規従業員の登録</a></p>
 
     </c:param>

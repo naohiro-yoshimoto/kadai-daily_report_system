@@ -8,8 +8,7 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>日報管理システムへようこそ</h2>
-        <h3>【自分の日報　一覧】</h3>
+        <h2>検索一覧</h2>
         <table id="report_list">
             <tbody>
                 <tr>
@@ -42,8 +41,7 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p><br><br>
-
-
+        <c:set var="flush" value="null" />
+        <p><a href="<c:url value='/search/index' />">一覧に戻る</a></p>
     </c:param>
 </c:import>
